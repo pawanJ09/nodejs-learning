@@ -1,0 +1,9 @@
+{
+  "name": "aws-cw-rules-demo",
+  "version": "1.0.0",
+  "description": "A Node.js project to list all AWS Cloudwatch event rules from Event Bus and also enable/disable them",
+  "private": true,
+  "dependencies": {
+    "aws-sdk": "^2.9"
+  }
+}
