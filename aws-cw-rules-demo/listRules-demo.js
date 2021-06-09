@@ -21,6 +21,14 @@ const listAllEventRules = async(cloudwatchevents, params) => {
   var promiseObj = cloudwatchevents.listRules(params).promise();
   promiseObj.then(function(data) {
     console.log('Printing rules from promise: ', data);
+    console.log('Printing data.NextToken from promise: ', data.NextToken);
+    if(data.NextToken) {
+      console.log('Printing data.NextToken from promise: ', data.NextToken);
+    } else {
+      console.log('Cannot print data.NextToken from promise');
+    }
+  }).catch(function(err) {
+    console.log('Printing error from promise: ', err);
   });
 
   var response = cloudwatchevents.listRules(params);
